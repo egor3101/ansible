@@ -1,0 +1,7 @@
+[test_group]
+client01 
+
+[all_groups:children]
+test_group
+
+

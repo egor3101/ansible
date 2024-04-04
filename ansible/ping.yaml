@@ -1,0 +1,25 @@
+- name: Ping Servers #test commetns
+  hosts: all
+  become: yes
+  
+  tasks:
+
+   #Just ping  
+  - name: Task ping
+    ping:
+
+   #Update packges
+  - name: Update cache
+    apt:
+     update_cache: yes
+
+   #Upgrade packges 
+  - name: Upgrade
+    apt:
+     upgrade: yes
+
+   #Install apache
+  - name: Install
+    apt:
+     pkg: htop
+     state: present # or latest  
